@@ -1,151 +1,73 @@
 <script>
-    // Hero section for Prestige Forms
-    // Self-contained, responsive layout with CTA buttons and logo image
-    export let title = "Build beautiful forms — fast";
+    export let title = "Design forms people enjoy using";
     export let subtitle =
-        "Create, customize and publish forms in minutes. No code required.";
+        "Create beautiful, accessible forms with drag & drop, instant publishing, and analytics built-in.";
+    export let cta = "Get started — it’s free";
+    export let ctaHref = "#get-started";
 </script>
 
-<section class="hero" aria-labelledby="hero-title">
-    <div class="hero-inner">
-        <div class="hero-copy">
-            <h1 id="hero-title">{title}</h1>
-            <p class="hero-sub">{subtitle}</p>
+<section class="bg-white dark:bg-slate-900">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-24">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <h1
+                    class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight"
+                >
+                    {title}
+                </h1>
+                <p
+                    class="mt-4 text-lg text-slate-600 dark:text-slate-300 max-w-xl"
+                >
+                    {subtitle}
+                </p>
 
-            <div class="hero-ctas">
-                <a class="btn primary" href="#get-started">Get started</a>
-                <a class="btn ghost" href="#learn-more">Learn more</a>
+                <div
+                    class="mt-8 flex flex-col sm:flex-row sm:items-center sm:space-x-4 space-y-3 sm:space-y-0"
+                >
+                    <a
+                        href={ctaHref}
+                        class="inline-flex items-center justify-center rounded-md bg-indigo-600 hover:bg-indigo-700 px-6 py-3 text-white font-medium shadow"
+                        >{cta}</a
+                    >
+                    <a
+                        href="#learn-more"
+                        class="inline-flex items-center justify-center rounded-md border border-slate-200 dark:border-slate-700 px-6 py-3 text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800"
+                        >Learn more</a
+                    >
+                </div>
+
+                <ul
+                    class="mt-8 flex flex-wrap gap-3 text-sm text-slate-500 dark:text-slate-300"
+                >
+                    <li
+                        class="inline-flex items-center gap-2 bg-slate-50 dark:bg-slate-800 px-3 py-1 rounded-full"
+                    >
+                        ⚡ Fast setup
+                    </li>
+                    <li
+                        class="inline-flex items-center gap-2 bg-slate-50 dark:bg-slate-800 px-3 py-1 rounded-full"
+                    >
+                        🎨 Custom themes
+                    </li>
+                    <li
+                        class="inline-flex items-center gap-2 bg-slate-50 dark:bg-slate-800 px-3 py-1 rounded-full"
+                    >
+                        📊 Built‑in analytics
+                    </li>
+                </ul>
             </div>
 
-            <ul class="hero-features" aria-hidden="false">
-                <li>Drag & drop editor</li>
-                <li>Custom themes</li>
-                <li>Analytics & integrations</li>
-            </ul>
-        </div>
-
-        <div class="hero-visual" aria-hidden="true">
-            <!-- Logo / illustrative image from project root -->
-            <img src="../../PRESTIGE.png" alt="Prestige logo" />
+            <div class="flex items-center justify-center">
+                <div
+                    class="w-full max-w-md rounded-2xl overflow-hidden shadow-lg ring-1 ring-slate-900/5 dark:ring-white/5"
+                >
+                    <img
+                        src="/PRESTIGE.png"
+                        alt="Prestige preview"
+                        class="w-full h-auto object-cover bg-slate-100 dark:bg-slate-800"
+                    />
+                </div>
+            </div>
         </div>
     </div>
 </section>
-
-<style>
-    .hero {
-        padding: 3rem 1rem;
-        background: linear-gradient(180deg, #0f172a 0%, #071033 100%);
-        color: var(--color-on-dark, #eef2ff);
-    }
-
-    .hero-inner {
-        max-width: 1100px;
-        margin: 0 auto;
-        display: flex;
-        gap: 2.5rem;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
-
-    .hero-copy {
-        flex: 1 1 420px;
-        min-width: 260px;
-    }
-
-    h1 {
-        font-size: 2rem;
-        line-height: 1.05;
-        margin: 0 0 0.75rem 0;
-        color: #fff;
-    }
-
-    .hero-sub {
-        margin: 0 0 1.25rem 0;
-        color: rgba(255, 255, 255, 0.85);
-    }
-
-    .hero-ctas {
-        display: flex;
-        gap: 0.75rem;
-        margin-bottom: 1rem;
-    }
-
-    .btn {
-        display: inline-block;
-        padding: 0.6rem 1rem;
-        border-radius: 8px;
-        text-decoration: none;
-        font-weight: 600;
-        border: 1px solid transparent;
-    }
-
-    .btn.primary {
-        background: linear-gradient(90deg, #7c3aed, #4f46e5);
-        color: white;
-    }
-
-    .btn.ghost {
-        background: transparent;
-        color: #e6eefc;
-        border-color: rgba(255, 255, 255, 0.08);
-    }
-
-    .hero-features {
-        display: flex;
-        gap: 1rem;
-        list-style: none;
-        padding: 0;
-        margin: 0.5rem 0 0 0;
-        color: rgba(255, 255, 255, 0.8);
-        flex-wrap: wrap;
-    }
-
-    .hero-features li {
-        background: rgba(255, 255, 255, 0.03);
-        padding: 0.35rem 0.6rem;
-        border-radius: 999px;
-        font-size: 0.9rem;
-    }
-
-    .hero-visual {
-        flex: 0 0 320px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-width: 220px;
-    }
-
-    .hero-visual img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 12px;
-        box-shadow: 0 8px 30px rgba(2, 6, 23, 0.6);
-    }
-
-    @media (max-width: 720px) {
-        h1 {
-            font-size: 1.6rem;
-        }
-        .hero-inner {
-            gap: 1rem;
-        }
-        .hero-visual {
-            order: -1;
-            width: 100%;
-            display: flex;
-            padding-bottom: 1rem;
-        }
-        .hero-copy {
-            width: 100%;
-        }
-        .hero-ctas {
-            flex-direction: column;
-            align-items: stretch;
-        }
-        .btn {
-            width: 100%;
-            text-align: center;
-        }
-    }
-</style>
