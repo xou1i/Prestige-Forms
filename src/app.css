@@ -1,8 +1,13 @@
 @import "https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css";
 
-body {
-  font-family: 'Helvetica Neue', sans-serif;
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400..800&display=swap');
+
+
+*{
+  font-family: 'Baloo Da 2', sans-serif;
 }
+
 
 html {
   scroll-behavior: smooth;
